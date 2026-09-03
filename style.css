@@ -1,0 +1,74 @@
+body {
+  overscroll-behavior-y: contain;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+input, select, textarea {
+  user-select: text;
+}
+
+#thermal-receipt, #pdf-report-print {
+  display: none;
+}
+
+.btn-touch-xl {
+  min-height: 44px !important;
+  font-size: 0.875rem !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
+select, input[type="text"], input[type="number"], input[type="tel"] {
+  min-height: 44px !important;
+  font-size: 0.875rem !important;
+}
+
+@media (orientation: landscape) {
+  main {
+    padding: 0.5rem !important;
+  }
+  .landscape-col {
+    max-height: calc(100vh - 75px);
+    overflow-y: auto;
+  }
+}
+
+@media print {
+  body * { visibility: hidden !important; }
+  
+  body.print-mode-thermal #thermal-receipt, 
+  body.print-mode-thermal #thermal-receipt * { 
+    visibility: visible !important; 
+  }
+  body.print-mode-thermal #thermal-receipt {
+    display: block !important;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: var(--print-paper-width, 58mm);
+    font-family: monospace;
+    font-size: 11px;
+    color: black;
+    background: white;
+    padding: 0;
+    margin: 0;
+  }
+
+  body.print-mode-pdf #pdf-report-print, 
+  body.print-mode-pdf #pdf-report-print * { 
+    visibility: visible !important; 
+  }
+  body.print-mode-pdf #pdf-report-print {
+    display: block !important;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    color: black;
+    background: white;
+    padding: 20px;
+    margin: 0;
+  }
+}
+
