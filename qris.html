@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>QRIS Pembayaran - GOKLin Laundry</title>
+  
+  <meta name="theme-color" content="#0f172a">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col items-center justify-center p-4 font-sans antialiased">
+
+  <div class="bg-slate-900 border border-slate-800 rounded-3xl max-w-sm w-full p-6 text-center shadow-2xl space-y-4">
+    
+    <!-- Header Toko -->
+    <div class="flex items-center justify-center gap-2 mb-1">
+      <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-amber-400 via-amber-500 to-emerald-500 flex items-center justify-center text-slate-900 font-black">
+        <i data-lucide="washing-machine" class="w-5 h-5"></i>
+      </div>
+      <h1 class="text-base font-black tracking-tight">
+        <span class="text-amber-400">GÖ</span><span class="text-emerald-400">KLin</span> <span class="text-indigo-400">LAUNDRY</span>
+      </h1>
+    </div>
+
+    <p class="text-xs text-slate-400 leading-relaxed">
+      Silakan scan QRIS di bawah ini menggunakan aplikasi M-Banking atau E-Wallet Anda, atau simpan ke galeri HP.
+    </p>
+    
+    <!-- Kotak Gambar QRIS -->
+    <div class="bg-white p-3 rounded-2xl inline-block shadow-inner border border-slate-700">
+      <img src="qris.png" alt="QRIS GOKLin Laundry" class="w-64 h-64 object-contain mx-auto rounded-lg">
+    </div>
+
+    <!-- Tombol Simpan Otomatis ke Galeri HP -->
+    <a href="qris.png" download="QRIS-GOKLin-Laundry.png" class="w-full bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-extrabold py-3.5 px-4 rounded-xl flex items-center justify-center gap-2 text-xs shadow-lg transition active:scale-95">
+      <i data-lucide="download" class="w-4 h-4"></i> Simpan QRIS ke Galeri HP
+    </a>
+    
+    <div class="pt-2 border-t border-slate-800 text-[10px] text-slate-500 font-medium">
+      Purwokerto • Aman, Cepat & Terpercaya
+    </div>
+  </div>
+
+  <script>
+    if (window.lucide) lucide.createIcons();
+  </script>
+</body>
+</html>
+
